@@ -36,5 +36,30 @@ public class test {
         System.out.println();
         System.out.println("-----------------------------------");
 
+        FXPrices prices = new FXPrices();
+
+        prices.addForeignExchangeValue("EUR", "USD", 0.85);
+        prices.addForeignExchangeValue("EUR", "GBP", 1.10);
+        prices.addForeignExchangeValue("USD", "GBP", 1.29);
+        prices.addForeignExchangeValue("RON", "GBP", 5.39);
+        prices.addForeignExchangeValue("INR", "EUR", 87.23);
+        prices.addForeignExchangeValue("AUD", "EUR", 1.66);
+        prices.addForeignExchangeValue("GBP", "AUD", 1.84);
+        prices.addForeignExchangeValue("INR", "EUR", 87.70);
+        prices.addForeignExchangeValue("USD", "INR", 0.013);
+        prices.addForeignExchangeValue("GBP", "CAD", 1.72);
+        prices.addForeignExchangeValue("CAD", "EUR", 1.56);
+        prices.addForeignExchangeValue("GBP", "CAD", 1.55);
+        prices.addForeignExchangeValue("AUD", "EUR", 1.85);
+        prices.addForeignExchangeValue("INR", "EUR", 87.89);
+        prices.addForeignExchangeValue("INR", "EUR", 87.67);
+        prices.addForeignExchangeValue("INR", "EUR", 87.50);
+
+        prices.displayTop10RecentPrices();
+        prices.TopMostRecentPricesForCurrencyPair("EUR", "INR", 3);
+
+
+        System.out.println();
+        System.out.println("-----------------------------------");
     }
 }
